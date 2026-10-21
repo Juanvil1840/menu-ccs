@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menú digital de ccsArepas en Parque San Roque, Bogotá. Auténtico sabor venezolano: arepas, empanadas, club house y bebidas.">
+    <title>Menú Digital | ccsArepas - Parque San Roque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <img src="./img/LOGO-CCS-AREPAS.svg" alt="Logo ccsArepas" class="logo-img"> 
+            </div>
+            <div class="brand-meta">
+                <h1 class="visually-hidden">ccsArepas</h1>
+                <p class="location-badge">📍 Parque San Roque</p>
+            </div>
+        </div>
+
+        <!-- Barra de navegación rápida Mobile-First -->
+        <nav class="category-nav" aria-label="Categorías del menú">
+            <a href="#destacados" class="nav-pill pill-highlight">📸 Especialidades</a>
+            <a href="#entradas" class="nav-pill">Entradas</a>
+            <a href="#arepas" class="nav-pill">Arepas</a>
+            <a href="#especiales" class="nav-pill">Especiales</a>
+            <a href="#vegetarianas" class="nav-pill">Vegetarianas</a>
+            <a href="#clubhouse" class="nav-pill">Club House</a>
+            <a href="#empanadas" class="nav-pill">Empanadas</a>
+            <a href="#bebidas" class="nav-pill">Bebidas</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DEL MENÚ -->
+    <main class="menu-wrapper">
+
+        <!-- ==================== CARRUSEL VISUAL DE ESPECIALIDADES ==================== -->
+        <section id="destacados" class="showcase-section">
+            <div class="showcase-header">
+                <h2 class="showcase-title">Nuestras Especialidades</h2>
+                <span class="swipe-hint">Desliza ➔</span>
+            </div>
+            
+            <div class="photo-carousel">
+                <!-- 1. Maltín Polar -->
+                <a href="#bebidas" class="carousel-card">
+                    <img src="./img/cssmaltinpolar.png" alt="Maltín Polar" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Favorita</span>
+                        <h3>Maltín Polar</h3>
+                        <p>$10.000</p>
+                    </div>
+                </a>
+
+                <!-- 2. Tequeños -->
+                <a href="#entradas" class="carousel-card">
+                    <img src="./img/csstequenos.png" alt="Tequeños Venezolanos" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Para compartir</span>
+                        <h3>Tequeños (6 Und)</h3>
+                        <p>$21.000</p>
+                    </div>
+                </a>
+
+                <!-- 3. Toddy -->
+                <a href="#bebidas" class="carousel-card">
+                    <img src="./img/csstoddy.png" alt="Toddy Frío" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ En Malteadora</span>
+                        <h3>Toddy Frío</h3>
+                        <p>$10.000</p>
+                    </div>
+                </a>
+
+                <!-- 4. Reina Pepiada -->
+                <a href="#especiales" class="carousel-card">
+                    <img src="./img/cssarepareina.png" alt="Arepa Reina Pepiada" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Clásica</span>
+                        <h3>Reina Pepiada</h3>
+                        <p>$24.000</p>
+                    </div>
+                </a>
+
+                <!-- 5. Empanadas -->
+                <a href="#empanadas" class="carousel-card">
+                    <img src="./img/cssempanadas.png" alt="Empanadas Venezolanas" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Masa Dulce</span>
+                        <h3>Empanadas</h3>
+                        <p>Desde $10.000</p>
+                    </div>
+                </a>
+
+                <!-- 6. Club House -->
+                <a href="#clubhouse" class="carousel-card">
+                    <img src="./img/cssclubhouse.png" alt="Club House Sándwich" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Con Papas y Gaseosa</span>
+                        <h3>Club House</h3>
+                        <p>Desde $36.000</p>
+                    </div>
+                </a>
+
+                <!-- 7. Arepa Pabellón -->
+                <a href="#especiales" class="carousel-card">
+                    <img src="./img/cssarepapabellon.png" alt="Arepa Pabellón" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Tradicional</span>
+                        <h3>Arepa Pabellón</h3>
+                        <p>$24.000</p>
+                    </div>
+                </a>
+
+                <!-- 8. Cumbiamba -->
+                <a href="#especiales" class="carousel-card">
+                    <img src="./img/cssarepacumbiamba.png" alt="Arepa Cumbiamba" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Especial</span>
+                        <h3>Cumbiamba</h3>
+                        <p>$24.000</p>
+                    </div>
+                </a>
+
+                <!-- 9. Chicha -->
+                <a href="#bebidas" class="carousel-card">
+                    <img src="./img/csschicha.png" alt="Chicha El Chichero" loading="lazy">
+                    <div class="carousel-caption">
+                        <span class="badge-star">★ Tradicional</span>
+                        <h3>Chicha Venezolana</h3>
+                        <p>$10.000</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: ENTRADAS ==================== -->
+        <section id="entradas" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/csstequenos.png" alt="Entradas y Tequeños ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay">
+                <header class="section-header">
+                    <h2 class="section-title">Entradas</h2>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Arepitas Dulces <span class="item-qty">(3 Unidades)</span></h3>
+                            <span class="item-price">$22.000</span>
+                        </div>
+                        <p class="item-desc">Arepitas de masa dulce y un toque de anís, acompañado de queso y nata (Suero Costeño).</p>
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Tequeños <span class="item-qty">(6 Unidades)</span></h3>
+                                <span class="item-price">$21.000</span>
+                            </div>
+                            <p class="item-desc">Tequeño mediano, lleno de queso y perfectamente fritos.</p>
+                        </div>
+                        <img src="./img/csstequenos.png" alt="Tequeños" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Chori Arepita</h3>
+                            <span class="item-price">$16.000</span>
+                        </div>
+                        <p class="item-desc">Arepita frita con chorizos, especial para compartir.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Papas francesas</h3>
+                            <span class="item-price">$8.000</span>
+                        </div>
+                        <p class="item-desc">Servicio de papas a la francesa.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: AREPAS ==================== -->
+        <section id="arepas" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/cssarepasvarias.png" alt="Arepas Venezolanas ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay">
+                <header class="section-header header-with-price">
+                    <h2 class="section-title">Arepas</h2>
+                    <span class="category-base-price">$22.000</span>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Catira</h3>
+                            </div>
+                            <p class="item-desc">Arepa asada rellena de pollo desmechado con queso amarillo gouda.</p>
+                        </div>
+                        <img src="./img/cssarepacatira.png" alt="Arepa Catira" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Peluda</h3>
+                            </div>
+                            <p class="item-desc">Arepa asada rellena de carne mechada con queso amarillo gouda.</p>
+                        </div>
+                        <img src="./img/cssarepapeluda.png" alt="Arepa Peluda" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Choricheese</h3>
+                            </div>
+                            <p class="item-desc">Arepa asada rellena de chorizo mixto en rueditas con queso amarillo gouda, también la puedes cambiar por queso blanco.</p>
+                        </div>
+                        <img src="./img/cssarepachoricheese.png" alt="Arepa Choricheese" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Diablito</h3>
+                        </div>
+                        <p class="item-desc">Una lata de Diablito preparada con mayonesa, salsa de tomate y terminada con queso blanco rallado.</p>
+                        <div class="item-addon-box">
+                            <strong>Adicional:</strong> Arepa frita con huequito en el medio <span>$2.000</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Criolla</h3>
+                        </div>
+                        <p class="item-desc">Tajadas, carne molida y queso blanco.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Merienda</h3>
+                        </div>
+                        <p class="item-desc">Deliciosa combinación de jamón y queso amarillo.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Atún</h3>
+                        </div>
+                        <p class="item-desc">Ensalada cruda de atún acompañada de queso blanco.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Pollo Desgranado</h3>
+                        </div>
+                        <p class="item-desc">Pollo salteado con tocineta y maíz dulce más queso amarillo.</p>
+                    </article>
+
+                    <article class="menu-item highlight-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Arepa solo Queso</h3>
+                            <span class="item-price">$19.000</span>
+                        </div>
+                        <p class="item-desc">A elegir entre blanco rallado, amarillo rallado o mixto.</p>
+                        <div class="item-addon-box">
+                            <div>Opción queso a la plancha <span>+$3.000</span></div>
+                            <div>Queso de Mano o Guayanés <span>+$7.000</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: AREPAS ESPECIALES ==================== -->
+        <section id="especiales" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/cssarepapabellon.png" alt="Arepas Especiales ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay">
+                <header class="section-header header-with-price">
+                    <h2 class="section-title">Arepas Especiales</h2>
+                    <span class="category-base-price">$24.000</span>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Pabellón <span class="star-icon" aria-label="Recomendado">★</span></h3>
+                            </div>
+                            <p class="item-desc">Suculentos sabores dentro de una arepa, comenzamos con la tajada de plátano al fondo, para seguir con carne desmechada, caraota (frijol negro) y mucho queso blanco rallado.</p>
+                        </div>
+                        <img src="./img/cssarepapabellon.png" alt="Arepa Pabellón" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Reina Pepiada (Sifrina) <span class="star-icon" aria-label="Recomendado">★</span></h3>
+                            </div>
+                            <p class="item-desc">Nuestra deliciosa versión con base de aguacate en tiras, pollo en salsa de la casa y queso gouda recién rallado.</p>
+                        </div>
+                        <img src="./img/cssarepareina.png" alt="Arepa Reina Pepiada" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Cumbiamba <span class="star-icon" aria-label="Recomendado">★</span></h3>
+                            </div>
+                            <p class="item-desc">¡La reina de la parranda! Pollo mechado, chicharrón y carne mechada para finalizar con queso, acompañado de hogao.</p>
+                        </div>
+                        <img src="./img/cssarepacumbiamba.png" alt="Arepa Cumbiamba" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Masa de Chicharrón</h3>
+                            </div>
+                            <p class="item-desc">A esta arepa le agregamos chicharrón desmenuzado y finamente picado, viene rellena con queso, pero la puedes agregar a cualquier arepa.</p>
+                            <div class="item-addon-box">
+                                Masa de Chicharrón si es sobre otra arepa son: <span>$3.000</span>
+                            </div>
+                        </div>
+                        <img src="./img/cssarepamasachicharron.png" alt="Arepa Masa de Chicharrón" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Meatball</h3>
+                            </div>
+                            <p class="item-desc">Arepa rellena con albóndigas de carne magra de res en salsa napolitana, más queso parmesano y mozarella o blanco rallado.</p>
+                        </div>
+                        <img src="./img/cssarepameatball.png" alt="Arepa Meatball" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Arepa Rumbera</h3>
+                        </div>
+                        <p class="item-desc">Arepa rellena de pernil salteado en la plancha con queso amarillo.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Colombiana</h3>
+                        </div>
+                        <p class="item-desc">Tajadas de plátano, frijol rojo, panceta y queso blanco.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Chuleta Ahumada</h3>
+                        </div>
+                        <p class="item-desc">Arepa asada rellena de chuleta de cerdo ahumada y queso amarillo gouda, puedes cambiarlo por queso blanco.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Cordon Bleu</h3>
+                        </div>
+                        <p class="item-desc">Tiras de pollo apanado con jamón en salsa y queso amarillo.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">California</h3>
+                        </div>
+                        <p class="item-desc">Suculenta Pechuga en salsa Ranch, tomate fresco, aguacate y queso amarillo.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Llanera <span class="star-icon" aria-label="Recomendado">★</span></h3>
+                        </div>
+                        <p class="item-desc">Tiras de lomo fino de res a la plancha, aguacate y tomate, para terminar con queso blanco rallado.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Montañera</h3>
+                        </div>
+                        <p class="item-desc">Frijol, carne, chorizo y maduritos picados con queso blanco.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: AREPAS VEGETARIANAS ==================== -->
+        <section id="vegetarianas" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/cssarepacapresa.png" alt="Arepas Vegetarianas ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay veggie-theme">
+                <header class="section-header">
+                    <h2 class="section-title">Arepas Vegetarianas</h2>
+                    <span class="veggie-badge">🌱 100% Vegetarian Food</span>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Capresa</h3>
+                                <span class="item-price">$22.000</span>
+                            </div>
+                            <p class="item-desc">Arepa con tomates frescos, salsa pesto y queso mozzarella de búfala. Puedes cambiar el queso por blanco a la plancha.</p>
+                        </div>
+                        <img src="./img/cssarepacapresa.png" alt="Arepa Capresa" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Pabellón Vegetariano</h3>
+                            <span class="item-price">$24.000</span>
+                        </div>
+                        <p class="item-desc">Deliciosa combinación de tajadas de plátano maduro, aguacate, caraota (frijol negro) para terminar con queso blanco rallado.</p>
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Dominó</h3>
+                                <span class="item-price">$22.000</span>
+                            </div>
+                            <p class="item-desc">Arepa de caraota (frijol negro) con queso blanco rallado.</p>
+                        </div>
+                        <img src="./img/cssarepadomino.png" alt="Arepa Dominó" class="item-thumb" loading="lazy">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: CLUB HOUSE / SÁNDWICH ==================== -->
+        <section id="clubhouse" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/cssclubhouse.png" alt="Club House ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay">
+                <header class="section-header">
+                    <h2 class="section-title">Club House / Sándwich</h2>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Club House Sándwich de Pollo</h3>
+                            <span class="item-price">$36.000</span>
+                        </div>
+                        <p class="item-desc">Delicioso Sándwich tipo Club en pan grande, relleno de pollo, jamón, queso, huevo, lechuga, tomate y salsas. Acompañado de papas francesas y gaseosa personal.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Club House Sándwich de Chuleta Ahumada</h3>
+                            <span class="item-price">$39.000</span>
+                        </div>
+                        <p class="item-desc">Delicioso Sándwich tipo Club en pan grande, con chuleta ahumada, jamón, queso, huevo, lechuga, tomate y salsas. Acompañado de papas francesas y gaseosa personal.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: EMPANADAS ==================== -->
+        <section id="empanadas" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/cssempanadas.png" alt="Empanadas Venezolanas ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay">
+                <header class="section-header header-with-price">
+                    <h2 class="section-title">Empanadas</h2>
+                    <span class="category-base-price">$10.000</span>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Queso</h3>
+                        </div>
+                        <p class="item-desc">Empanada de masa ligeramente dulce, rellena de queso blanco.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Carne Molida</h3>
+                        </div>
+                        <p class="item-desc">Empanada de masa ligeramente dulce, rellena de carne molida.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Carne Mechada</h3>
+                        </div>
+                        <p class="item-desc">Empanada de masa ligeramente dulce, rellena de carne mechada.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Pollo</h3>
+                        </div>
+                        <p class="item-desc">Empanada de masa ligeramente dulce, rellena de pollo.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Dominó</h3>
+                        </div>
+                        <p class="item-desc">Empanada de masa ligeramente dulce, rellena de queso con caraotas (frijol negro).</p>
+                    </article>
+
+                    <article class="menu-item highlight-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada Operada <span class="item-qty">(Pollo o Carne)</span></h3>
+                            <span class="item-price">$15.000</span>
+                        </div>
+                        <p class="item-desc">La intervenimos en nuestro quirófano con delicioso queso amarillo.</p>
+                    </article>
+
+                    <article class="menu-item highlight-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Pabellón</h3>
+                            <span class="item-price">$16.000</span>
+                        </div>
+                        <p class="item-desc">Los mejores sabores de Venezuela, caraota (frijol negro), tajada, queso y carne mechada en deliciosa masa ligeramente dulce.</p>
+                    </article>
+
+                    <article class="menu-item highlight-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Empanada de Tocineta y Queso</h3>
+                            <span class="item-price">$15.000</span>
+                        </div>
+                        <p class="item-desc">Empanada de masa ligeramente dulce, rellena de queso amarillo y tocineta.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN: BEBIDAS (FRÍAS) ==================== -->
+        <section id="bebidas" class="menu-section">
+            <div class="category-banner">
+                <img src="./img/cssbebidas.png" alt="Bebidas Venezolanas ccsArepas" loading="lazy">
+            </div>
+            <div class="section-overlay">
+                <header class="section-header">
+                    <div>
+                        <h2 class="section-title">Bebidas</h2>
+                        <p class="section-subtitle">Sabor Venezolano</p>
+                    </div>
+                </header>
+
+                <div class="items-grid">
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Maltín Polar <span class="item-qty">Lata 355 ml.</span> <span class="star-icon">★★★★★</span></h3>
+                                <span class="item-price">$10.000</span>
+                            </div>
+                            <p class="item-desc">Fría y refrescante, malta polar con toda la energía para acompañar tu comida.</p>
+                        </div>
+                        <img src="./img/cssmaltinpolar.png" alt="Maltín Polar" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Chicha El Chichero <span class="star-icon">★★★★★</span></h3>
+                                <span class="item-price">$10.000</span>
+                            </div>
+                            <p class="item-desc">Deliciosa chicha tradicional Venezolana, preparada al momento con leche condensada y canela.</p>
+                        </div>
+                        <img src="./img/csschicha.png" alt="Chicha El Chichero" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Toddy Frío <span class="star-icon">★★★★★</span></h3>
+                                <span class="item-price">$10.000</span>
+                            </div>
+                            <p class="item-desc">La más Deliciosa bebida achocolatada preparada bien fría en malteadora.</p>
+                        </div>
+                        <img src="./img/csstoddy.png" alt="Toddy Frío" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item item-with-photo">
+                        <div class="item-info">
+                            <div class="item-header">
+                                <h3 class="item-name">Nestea <span class="item-qty">(Durazno ó Limón)</span> <span class="star-icon">★★★★★</span></h3>
+                                <span class="item-price">$10.000</span>
+                            </div>
+                            <p class="item-desc">Refrescante, espesito, el mejor sabor original de Nestea.</p>
+                        </div>
+                        <img src="./img/cssnestea.png" alt="Nestea" class="item-thumb" loading="lazy">
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Limonada Cerezada</h3>
+                            <span class="item-price">$10.000</span>
+                        </div>
+                        <p class="item-desc">Deliciosa Limonada con cerezas confitadas.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Limonada Natural</h3>
+                            <span class="item-price">$6.000</span>
+                        </div>
+                        <p class="item-desc">Deliciosa Limonada natural.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Papelón <span class="item-qty">(Limonada de Panela)</span></h3>
+                            <span class="item-price">$7.000</span>
+                        </div>
+                        <p class="item-desc">Refrescante, espesito, el mejor sabor.</p>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Jugos Naturales</h3>
+                        </div>
+                        <p class="item-desc">El mejor jugo, las mejores frutas, siempre frescas, pídelo de: parchita (maracuyá), fresa, mango, frutos rojos, guanábana, lulo y Cancún.</p>
+                        <div class="item-addon-box dual-price">
+                            <span><strong>En Agua:</strong> $8.000</span>
+                            <span><strong>En Leche:</strong> $9.000</span>
+                        </div>
+                    </article>
+
+                    <article class="menu-item">
+                        <div class="item-header">
+                            <h3 class="item-name">Gaseosas <span class="item-qty">(400cc / 250cc)</span></h3>
+                        </div>
+                        <p class="item-desc">Coca Cola, Sprite, Quatro, Postobón.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p class="footer-slogan">Tradición de Nuestra Tierra</p>
+        <p class="footer-info"><strong>ccsArepas</strong> • Parque San Roque, Bogotá</p>
+    </footer>
+
+</body>
+</html>

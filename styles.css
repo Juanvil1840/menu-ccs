@@ -1,0 +1,571 @@
+/* ==========================================================================
+   VARIABLES GLOBALES E IDENTIDAD DE MARCA (ccsArepas)
+   ========================================================================== */
+:root {
+    --brand-orange: #e67325;
+    --brand-green: #489e3a;
+    --brand-green-dark: #2f6f24;
+    --brand-brown: #3b2313;
+    --brand-gold: #d6983a;
+    
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --bg-main: #fdf8f2;
+    
+    --font-heading: 'Kaushan Script', cursive;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    --radius-lg: 1.25rem;
+    --radius-md: 0.85rem;
+    --radius-sm: 0.6rem;
+    --shadow-soft: 0 6px 18px rgba(59, 35, 19, 0.14);
+}
+
+/* ==========================================================================
+   RESET Y BASE MOBILE-FIRST
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--brand-orange);
+    color: var(--text-primary);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 2rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* ==========================================================================
+   ENCABEZADO Y NAVEGACIÓN TÁCTIL (STICKY)
+   ========================================================================== */
+.site-header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    border-bottom: 3px solid var(--brand-green);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 1rem;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.logo-img {
+    height: 3.2rem;
+    width: auto;
+    display: block;
+}
+
+.location-badge {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--brand-brown);
+    background-color: #f4ebe1;
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    display: inline-block;
+}
+
+/* Barra deslizable con el pulgar para celulares */
+.category-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.6rem 1rem;
+    background-color: var(--bg-main);
+    scrollbar-width: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.category-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-pill {
+    flex: 0 0 auto;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-brown);
+    background-color: #ffffff;
+    border: 1.5px solid var(--brand-green);
+    padding: 0.4rem 0.9rem;
+    border-radius: 2rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-pill.pill-highlight {
+    background-color: var(--brand-brown);
+    color: #ffffff;
+    border-color: var(--brand-brown);
+}
+
+.nav-pill:active,
+.nav-pill:focus {
+    background-color: var(--brand-green);
+    color: #ffffff;
+    border-color: var(--brand-green);
+}
+
+/* ==========================================================================
+   CARRUSEL VISUAL DE ESPECIALIDADES (CSS SCROLL-SNAP PURO)
+   ========================================================================== */
+.menu-wrapper {
+    padding: 1rem 0.75rem;
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.showcase-section {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border-radius: var(--radius-lg);
+    padding: 1rem 0 1.15rem;
+    scroll-margin-top: 7.5rem;
+}
+
+.showcase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 1rem 0.65rem;
+    color: #ffffff;
+}
+
+.showcase-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.swipe-hint {
+    font-size: 0.78rem;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+}
+
+.photo-carousel {
+    display: flex;
+    gap: 0.85rem;
+    overflow-x: auto;
+    padding: 0.25rem 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.photo-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-card {
+    flex: 0 0 155px;
+    scroll-snap-align: start;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.carousel-card:active {
+    transform: scale(0.97);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    background-color: #f4ebe1;
+}
+
+.carousel-caption {
+    padding: 0.6rem 0.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.badge-star {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--brand-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.carousel-caption h3 {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--brand-brown);
+    line-height: 1.2;
+}
+
+.carousel-caption p {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-green-dark);
+}
+
+/* ==========================================================================
+   ESTRUCTURA DE SECCIONES Y TARJETAS DEL MENÚ
+   ========================================================================== */
+.menu-section {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: var(--shadow-soft);
+    scroll-margin-top: 7.5rem;
+}
+
+/* Banner superior para categorías con foto general (Club House y Empanadas) */
+.category-banner {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background-color: #f4ebe1;
+    position: relative;
+}
+
+.category-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.section-overlay {
+    background-color: #ffffff;
+    padding: 1.25rem 1rem;
+}
+
+/* Tema verde para la sección de Arepas Vegetarianas */
+.section-overlay.veggie-theme {
+    background: linear-gradient(180deg, #388e2c 0%, #2b7021 100%);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   CABECERAS DE CATEGORÍA
+   ========================================================================== */
+.section-header {
+    border-bottom: 2px dashed rgba(59, 35, 19, 0.18);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.header-with-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--brand-green);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--brand-brown);
+    margin-top: 0.15rem;
+}
+
+.category-base-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: var(--brand-brown);
+    padding: 0.2rem 0.7rem;
+    border-radius: var(--radius-sm);
+}
+
+.veggie-theme .section-header {
+    border-bottom-color: rgba(255, 255, 255, 0.35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.veggie-theme .section-title {
+    color: #ffffff;
+}
+
+.veggie-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1.5px solid #ffffff;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2rem;
+}
+
+/* ==========================================================================
+   PLATOS E ÍTEMS DEL MENÚ (CON Y SIN MINIATURA FOTOGRÁFICA)
+   ========================================================================== */
+.items-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu-item {
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.veggie-theme .menu-item {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Layout horizontal tipo App de Delivery para platos que tienen imagen */
+.menu-item.item-with-photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-thumb {
+    width: 82px;
+    height: 82px;
+    flex: 0 0 82px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    background-color: #f4ebe1;
+    border: 2px solid rgba(230, 115, 37, 0.25);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.veggie-theme .item-thumb {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.item-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    position: relative;
+    padding-left: 0.85rem;
+}
+
+.item-name::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: var(--brand-orange);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.veggie-theme .item-name,
+.veggie-theme .item-name::before,
+.veggie-theme .item-price {
+    color: #ffffff;
+}
+
+.item-qty {
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.veggie-theme .item-qty {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.item-price {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--brand-brown);
+    white-space: nowrap;
+}
+
+.item-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding-left: 0.85rem;
+}
+
+.veggie-theme .item-desc {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.star-icon {
+    color: var(--brand-orange);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+/* Cajas redondeadas de adicionales */
+.item-addon-box {
+    margin-top: 0.5rem;
+    margin-left: 0.85rem;
+    padding: 0.45rem 0.75rem;
+    border: 1.5px solid var(--brand-brown);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-main);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.item-addon-box span {
+    font-weight: 800;
+    color: var(--brand-brown);
+}
+
+.item-addon-box.dual-price {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA
+   ========================================================================== */
+.site-footer {
+    text-align: center;
+    padding: 1.5rem 1rem 0.5rem;
+    color: #ffffff;
+}
+
+.footer-slogan {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-info {
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (TABLETS Y ESCRITORIO)
+   ========================================================================== */
+@media (min-width: 640px) {
+    .menu-wrapper {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .carousel-card {
+        flex: 0 0 180px;
+    }
+
+    .carousel-card img {
+        height: 140px;
+    }
+
+    .category-banner {
+        height: 210px;
+    }
+
+    .section-overlay {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .items-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem 1.5rem;
+    }
+
+    .menu-item {
+        border-bottom: none;
+        background-color: var(--bg-main);
+        padding: 0.9rem;
+        border-radius: var(--radius-md);
+    }
+
+    .veggie-theme .menu-item {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .item-thumb {
+        width: 90px;
+        height: 90px;
+        flex: 0 0 90px;
+    }
+
+    /* Banner superior para todas las categorías */
+.category-banner {
+    width: 100%;
+    height: 175px; /* Altura ideal en celulares para lucir el plato */
+    overflow: hidden;
+    background-color: #f4ebe1;
+    position: relative;
+}
+
+.category-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Centra el foco del plato */
+    display: block;
+}
+}
+
